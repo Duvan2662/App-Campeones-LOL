@@ -1,0 +1,9 @@
+.icon-after-text {
+  display: flex;
+  align-items: center;
+}
+
+.icon-after-text mat-icon {
+  order: 1; /* Asegura que el icono esté después del texto */
+  margin-left: 8px; /* Añade un margen para separación visual */
+}
