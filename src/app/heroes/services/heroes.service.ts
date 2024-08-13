@@ -23,6 +23,9 @@ export class HeroesService {
     .pipe(
       catchError(error => of(undefined))
     )
+  }
 
+  getSuggestions(query:string): Observable<Hero[]> {
+    return this.http.get<Hero[]>(`http://localhost:3000/heroes?=${query}&_limit=6`);
   }
 }
