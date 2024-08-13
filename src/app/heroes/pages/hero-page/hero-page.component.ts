@@ -11,6 +11,7 @@ import { Hero } from '../../interfaces/hero.interface';
 })
 export class HeroPageComponent implements OnInit {
 
+
   public hero?: Hero;
 
   constructor(
@@ -35,6 +36,10 @@ export class HeroPageComponent implements OnInit {
 
       return
     })
+  }
+
+  public goBack = (): void => {
+    this.router.navigateByUrl('heroes/list')
   }
 
 }
