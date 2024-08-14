@@ -31,4 +31,14 @@ export class NewHeroPageComponent {
     }
   ]
 
+
+
+  public onSubmit = (): void => {
+    console.log({
+      formIsValid: this.heroForm.valid,
+      value: this.heroForm.value
+    });
+
+  }
+
 }
