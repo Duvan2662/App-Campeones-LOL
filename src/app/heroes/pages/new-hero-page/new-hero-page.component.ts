@@ -50,6 +50,20 @@ export class NewHeroPageComponent {
       return
     }
 
+    if(this.currentHero.id){
+      this.heroesServices.updateHero(this.currentHero)
+        .subscribe(hero => {
+          //TODO: mostrar snackbar
+        });
+
+        return;
+    }
+
+    this.heroesServices.addHero(this.currentHero)
+      .subscribe(hero =>{
+        //TODO: mostrar snackbar, y navegar a heroes/edit/ hero.id
+      })
+
     // this.heroesServices.updateHero(this.heroForm.value)
   }
 
